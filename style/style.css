@@ -1,7 +1,48 @@
 @font-face {
-    font-family: 'Raleway';
-    src: url('../fonts/Raleway-VariableFont_wght.ttf');
+  font-family: "Raleway";
+  src: url("../fonts/Raleway-VariableFont_wght.ttf");
 }
 body {
-    font-family: 'Raleway';
+  font-family: "Raleway";
+}
+article {
+  background-color: #ffffff;
+}
+footer {
+  background-color: #f2f2f2;
+}
+.navbutton {
+  font-weight: 500;
+  text-decoration: none;
+  color: black;
+}
+.signup {
+  font-weight: bold;
+  color: #0065fc;
+  text-decoration: none;
+}
+h1 {
+  font-weight: bolder;
+}
+.section2 {
+  background-color: #f2f2f2;
+}
+.section3 {
+  background-color: #f2f2f2;
+}
+.starrating[data-active="true"] {
+  color: #0065fc;
+}
+.starrating[data-active="false"] {
+  color: #f2f2f2;
+}
+.locationbutton {
+  background-color: #f2f2f2;
+  border: none;
+}
+.searchbutton {
+  background-color: #0065fc;
+  color: white;
+  font-weight: bold;
+  border: none;
 }
