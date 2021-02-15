@@ -1,40 +1,43 @@
-@font-face {
-  font-family: "Raleway";
-  src: url("../fonts/Raleway-VariableFont_wght.ttf");
-}
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap");
 body {
   font-family: "Raleway";
-  display: block;
-  margin-top: 0px;
+  margin: 0;
 }
+
+.main {
+  max-width: 1440px;
+  margin: auto;
+}
+
+.header {
+  display: grid;
+  justify-items: center;
+}
+
 button {
   font-family: "Raleway";
   font-size: larger;
-  cursor:pointer;
+  cursor: pointer;
 }
-.header {
-  display: grid;
-  align-items: center;
-  margin-top: 0;
-  grid-template-columns: auto 1fr auto;
-  grid-template-areas: "logo . nav signup";
-}
+
 .logo {
-  grid-area: logo;
-  padding: 0 2rem;
-  position: relative;
-  top: 25px;
+  display: flex;
+  order: 0;
+  padding: 2rem 2rem;
+  height: 3rem;
+  justify-content: flex-start;
+  flex-grow: 1;
 }
+
 .nav {
   display: flex;
-  align-items: center;
-  grid-area: nav;
+  grid-area: navbar;
 }
+
 .signup {
-  display: flex;
-  align-items: center;
   grid-area: signup;
 }
+
 .navbutton:hover {
   font-weight: 500;
   text-decoration: none;
@@ -44,7 +47,9 @@ button {
   padding-top: 2.5rem;
   margin-top: 0;
 }
+
 .navbutton {
+  text-align: center;
   font-weight: 500;
   text-decoration: none;
   color: #0065fc;
@@ -53,31 +58,116 @@ button {
   padding-top: 2.5rem;
   margin-top: 0;
 }
+
 .inactive {
   color: #000000;
   border-top: transparent 3px solid;
 }
+
 .signup {
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0 2rem;
+  padding-top: 2.5rem;
+  margin-top: 0;
   font-weight: bold;
   color: #0065fc;
   border-top: transparent 3px solid;
 }
+
 .signup:hover {
   font-weight: bold;
 }
+
+@media screen and (min-width: 601px) {
+  .header {
+    display: grid;
+    margin: auto;
+    grid-template-columns: auto 1fr auto auto;
+    grid-template-areas: "logo . navbar signup";
+  }
+  .logo {
+    order: 0;
+  }
+  .nav {
+    order: 1;
+    display: flex;
+    justify-self: flex-end;
+  }
+  .signup {
+    order: 2;
+    display: flex;
+    justify-self: flex-end;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: "logo . signup" "navbar navbar navbar";
+  }
+  .logo {
+    order: 0;
+  }
+  .navbar {
+    width: 100%;
+  }
+  .nav {
+    order: 2;
+    display: flex;
+    width: 100vw;
+    text-justify: center;
+    text-align: center;
+  }
+  .navbutton {
+    justify-content: center;
+    width: 50%;
+    display: flex;
+    border-top: none;
+    border-bottom: #0065fc 3px solid;
+    padding: 2rem;
+    padding-top: 0rem;
+    padding-bottom: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+  .navbutton:hover {
+    border-top: none;
+    border-bottom: #0065fc 3px solid;
+    padding: 2rem;
+    padding-top: 0rem;
+    padding-bottom: 1.5rem;
+    margin-top: 0;
+  }
+  .inactive {
+    color: #000000;
+    border-bottom: #f2f2f2 3px solid;
+  }
+  .signup {
+    order: 1;
+    display: flex;
+    justify-self: flex-end;
+  }
+}
+
 h1 {
   font-weight: bold;
+  font-size: 30px;
+  margin: auto;
 }
+
 h2 {
-  margin-left: 40px;
   font-weight: bold;
+  font-size: 24px;
 }
+
 .section1 {
-  margin: 50px 33px;
+  margin: auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
 }
-#subtitle1 {
-  margin-top: -15px;
-}
+
 .locationbutton {
   margin-right: none;
   background-color: #f2f2f2;
@@ -89,15 +179,17 @@ h2 {
   position: relative;
   bottom: -1px;
 }
+
 .locationbutton:focus {
-  outline:none;
+  outline: none;
 }
+
 .searchbutton {
   position: relative;
   left: -8px;
   bottom: -1px;
   margin-left: none;
-  width: 160px;
+  width: fit-content;
   font-size: 1.1em;
   background-color: #0065fc;
   color: white;
@@ -106,10 +198,33 @@ h2 {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   height: 50px;
+  padding: 0.5rem 1rem;
 }
+
+.searchbuttonicon {
+  position: relative;
+  left: -8px;
+  bottom: -1px;
+  margin-left: none;
+  width: fit-content;
+  font-size: 1.1em;
+  background-color: #0065fc;
+  color: white;
+  font-weight: bold;
+  border: transparent solid;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  height: 50px;
+  display: none;
+  padding: 0.5rem 0.8rem;
+}
+
 .searchbutton:focus {
-  outline:none;
+  outline: none;
 }
+
 .searchbar {
   padding-left: 15px;
   font-family: "Raleway";
@@ -118,37 +233,46 @@ h2 {
   position: relative;
   left: -4px;
   margin: none;
-  width: 230px;
+  width: auto;
   border: none;
   height: 50px;
   border-top: 1px #f2f2f2 solid;
   border-bottom: 1px #f2f2f2 solid;
 }
+
 .searchbar:focus {
-  outline:none;
+  outline: none;
 }
+
 .searchgroup {
   height: 50px;
 }
+
 .filterbar {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin-top: 30px;
-  grid-template-columns: 50px 160px 120px 160px 200px;
-  grid-template-areas: "filters economic familial romantic pets";
-  grid-column-gap: 20px;
   font-weight: bold;
   font-size: 16px;
   margin-bottom: 30px;
 }
+
+.filters {
+  margin-right: 1rem;
+}
+
 .filtericon {
   color: #0065fc;
   background-color: #DEEBFF;
   padding: 13px;
   border-radius: 35px;
+  position: relative;
+  left: -1rem;
 }
+
 .filterbutton {
-  grid-template-columns: auto auto;
+  font-size: 18px;
   border-top: #f2f2f2 solid 3px;
   border-bottom: #f2f2f2 solid 3px;
   border-left: #f2f2f2 solid 3px;
@@ -157,43 +281,70 @@ h2 {
   border-top-left-radius: 30px;
   border-bottom-right-radius: 30px;
   border-top-right-radius: 30px;
-  cursor:pointer;
+  cursor: pointer;
+  margin: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
+
 .filterbutton:hover {
-background-color: #f2f2f2;
-transform: scale(1.1);
+  background-color: #f2f2f2;
+  transform: scale(1.1);
 }
+
 .infoicon {
+  float: left;
   border: solid 2px #f2f2f2;
   border-radius: 45px;
-  padding : 5px;
+  padding: 5px;
   padding-left: 9px;
   padding-right: 9px;
   font-size: small;
   color: #0065fc;
   position: relative;
   bottom: 2px;
+  margin-right: 1rem;
 }
+.infotext {
+  padding-top: 0.15rem;
+}
+
+@media screen and (max-width: 600px) {
+  .filters {
+    width: 100%;
+  }
+  .searchbutton {
+    display: none;
+  }
+  .searchbuttonicon {
+    display: inline-block
+  }
+  .searchgroup {
+    width: 100%;
+    margin: auto;
+  }
+}
+
 .bloc1 {
-  margin-left: 100px;
-  display:grid;
-  grid-template-columns: auto;
-  grid-template-areas: "hebergement populaires";
+  display: none;
+  justify-content: center;
+  flex-direction: row;
+  max-width: 1440px;
+  overflow: hidden;
 }
+
 #hebergement {
   background-color: #f2f2f2;
   border-radius: 20px;
-  padding-top:20px;
-  width: 1050px;
+  padding-top: 20px;
 }
+
 .section2 {
-  display:grid;
-  grid-template-columns: auto;
-  grid-template-areas: "card1 card2 card3"
-  "card4 card5 card6";
+  display: flex;
   padding-left: 20px;
   padding-right: 20px;
 }
+
 .card {
   width: 270px;
   height: 200px;
@@ -203,48 +354,145 @@ transform: scale(1.1);
   box-shadow: 0px 5px 20px #999;
   border: #ffffff 5px solid;
   border-radius: 20px;
+  cursor: pointer;
 }
+
+.card:hover {
+  transform: scale(1.05);
+}
+
 .cardimage {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  object-fit:cover;
+  object-fit: cover;
   width: 270px;
   height: 120px;
 }
-#populaires {
-  width: 500px;
-  background-color: #f2f2f2;
-  border-radius: 20px;
-  padding-top:20px;
+
+.cardtitle {
+  font-weight: bold;
+  margin-bottom: -12px;
 }
-.popularicon {
-  position:relative;
-  left: 150px;
+
+.cardtext {
+  margin-bottom: 2px;
 }
-.cards2 {
-  width: 200px;
-  height: 200px;
-  margin: 0px 55px;
-  background-color: white;
-  box-shadow: 0px 5px 20px #999;
+
+.starrating {
+  font-size: 12px;
+  margin: -2px;
 }
-.cardimages2 {
-  object-fit:cover;
-  width: 240px;
-  height: 120px;
-}
-.section3 {
-  background-color: #f2f2f2;
-}
+
 .starrating[data-active="true"] {
   color: #0065fc;
 }
+
 .starrating[data-active="false"] {
-  color: #f2f2f2;
+  color: #d9d9d9;
 }
+
+.cardbottom {
+  position: relative;
+  top: -5px;
+  left: 15px;
+  font-size: 15px;
+}
+
+#afficherplus {
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#populaires {
+  background-color: #f2f2f2;
+  border-radius: 20px;
+  padding-top: 20px;
+}
+
+.popularicon {
+  position: relative;
+  left: 150px;
+}
+
+.cards2 {
+  width: 400px;
+  height: 130px;
+  margin: 0px 30px;
+  margin-bottom: 30px;
+  background-color: white;
+  box-shadow: 0px 5px 20px #999;
+  border: #ffffff 5px solid;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.cards2:hover {
+  transform: scale(1.05);
+}
+
+.cardimages2 {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  object-fit: cover;
+  width: 120px;
+  height: 130px;
+}
+
+.cardright {
+  position: relative;
+  left: 135px;
+  bottom: 140px;
+  font-size: 15px;
+}
+
+.starratings2 {
+  position: relative;
+  top: 55px;
+  left: 5px;
+}
+
+.section3 {
+  background-color: #f2f2f2;
+}
+
+.activites {
+  display: flex;
+}
+
+.cards3 {
+  width: 270px;
+  height: 200px;
+  margin: 0px 30px;
+  margin-bottom: 30px;
+  background-color: white;
+  box-shadow: 0px 5px 20px #999;
+  border: #ffffff 5px solid;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.cardimage {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  object-fit: cover;
+  width: 270px;
+  height: 120px;
+}
+
+.cardtitle {
+  font-weight: bold;
+  margin-bottom: -12px;
+}
+
 article {
   background-color: #ffffff;
 }
+
 footer {
   background-color: #f2f2f2;
 }
