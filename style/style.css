@@ -1,10 +1,18 @@
+/* GENERAL */
+
 body {
   font-family: "Raleway";
   margin: 0;
 }
+
 .main {
   max-width: 1440px;
   margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
 }
 
 .header {
@@ -17,6 +25,34 @@ button {
   font-size: larger;
   cursor: pointer;
 }
+
+h1 {
+  font-weight: bold;
+  font-size: 30px;
+  margin: auto;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 24px;
+  margin-left: 2rem;
+}
+
+h3 {
+  font-size: 16px;
+  display: block;
+}
+
+h4 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+article {
+  background-color: #ffffff;
+}
+
+/* HEADER */
 
 .logo {
   display: flex;
@@ -148,27 +184,7 @@ button {
   }
 }
 
-h1 {
-  font-weight: bold;
-  font-size: 30px;
-  margin: auto;
-}
-
-h2 {
-  font-weight: bold;
-  font-size: 24px;
-  margin-left: 2rem;
-}
-
-h3 {
-  font-size: 16px;
-  display: block;
-}
-
-h4 {
-  font-size: 14px;
-  font-weight: 500;
-}
+/* SECTION 1 */
 
 .section1 {
   margin: auto;
@@ -333,6 +349,8 @@ h4 {
   }
 }
 
+/* SECTIONS 2 ET 3 (BLOC CENTRAL) */
+
 .bloc1 {
   display: flex;
   flex-wrap: wrap;
@@ -375,7 +393,6 @@ h4 {
   box-shadow: 0px 5px 20px #999;
   border: transparent 5px solid;
   border-radius: 20px;
-  cursor: pointer;
 }
 
 .card:hover {
@@ -470,7 +487,6 @@ h4 {
   box-shadow: 0px 5px 20px #999;
   border: transparent 5px solid;
   border-radius: 20px;
-  cursor: pointer;
 }
 
 .cards2:hover {
@@ -574,6 +590,8 @@ h4 {
   }
 }
 
+/* SECTION 4 */
+
 .titres4 {
   margin-top: 3rem;
 }
@@ -651,10 +669,10 @@ h4 {
   background-position: center;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1155px) {
   .activites {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto 14rem 2rem 2rem 2rem 14rem;
+    grid-template-rows: 0rem 14rem 2rem 2rem 2rem 14rem;
   }
   .activite1 {
     grid-row: 2/7;
@@ -682,7 +700,7 @@ h4 {
   }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1154px) {
   .activites {
     row-gap: 2rem;
     grid-template-columns: repeat(3, 1fr);
@@ -690,7 +708,7 @@ h4 {
   }
 }
 
-@media (max-width: 925px) {
+@media (max-width: 950px) {
   .activites {
     row-gap: 2rem;
     grid-template-columns: repeat(2, 1fr);
@@ -706,9 +724,7 @@ h4 {
   }
 }
 
-article {
-  background-color: #ffffff;
-}
+/* FOOTER */
 
 footer {
   background-color: #f2f2f2;
