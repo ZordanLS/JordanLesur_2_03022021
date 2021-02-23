@@ -1,34 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap");
 body {
   font-family: "Raleway";
   margin: 0;
 }
-
-::-webkit-scrollbar {
-  width: 0px;
-  height: 0px;
-}
-
-/* Track */
-
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 0px grey;
-  border-radius: 0px;
-}
-
-/* Handle */
-
-::-webkit-scrollbar-thumb {
-  background: transparent;
-  border-radius: 0px;
-}
-
-/* Handle on hover */
-
-::-webkit-scrollbar-thumb:hover {
-  background: transparent;
-}
-
 .main {
   max-width: 1440px;
   margin: auto;
@@ -141,8 +114,7 @@ button {
   .nav {
     order: 2;
     display: flex;
-    width: 100vw;
-    text-justify: center;
+    width: 100%;
     text-align: center;
   }
   .navbutton {
@@ -190,27 +162,21 @@ h2 {
 
 h3 {
   font-size: 16px;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
   display: block;
 }
 
 h4 {
   font-size: 14px;
   font-weight: 500;
-  margin: none;
 }
 
 .section1 {
   margin: auto;
-  padding: 0 2rem;
+  padding: 0 1rem;
   box-sizing: border-box;
 }
 
 .locationbutton {
-  margin-right: none;
   background-color: #f2f2f2;
   border: transparent solid;
   border-top-left-radius: 15px;
@@ -229,7 +195,6 @@ h4 {
   position: relative;
   left: -8px;
   bottom: -1px;
-  margin-left: none;
   width: fit-content;
   font-size: 1.1em;
   background-color: #0065fc;
@@ -246,7 +211,6 @@ h4 {
   position: relative;
   left: -8px;
   bottom: -1px;
-  margin-left: none;
   width: fit-content;
   font-size: 1.1em;
   background-color: #0065fc;
@@ -273,7 +237,6 @@ h4 {
   font-weight: bold;
   position: relative;
   left: -4px;
-  margin: none;
   width: auto;
   border: none;
   height: 50px;
@@ -312,23 +275,23 @@ h4 {
   padding: 13px;
   border-radius: 35px;
   position: relative;
-  left: -1rem;
+  left: -0.5rem;
 }
 
 .filterbutton {
-  font-size: 18px;
-  border-top: #f2f2f2 solid 3px;
-  border-bottom: #f2f2f2 solid 3px;
-  border-left: #f2f2f2 solid 3px;
-  border-right: #f2f2f2 solid 3px;
+  font-size: 16px;
+  border-top: #f2f2f2 solid 2px;
+  border-bottom: #f2f2f2 solid 2px;
+  border-left: #f2f2f2 solid 2px;
+  border-right: #f2f2f2 solid 2px;
   border-bottom-left-radius: 30px;
   border-top-left-radius: 30px;
   border-bottom-right-radius: 30px;
   border-top-right-radius: 30px;
   cursor: pointer;
   margin: 0.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .filterbutton:hover {
@@ -375,7 +338,6 @@ h4 {
   flex-wrap: wrap;
   justify-content: center;
   flex-direction: row;
-  max-width: auto;
   overflow: hidden;
   margin-top: 2.5rem;
 }
@@ -399,18 +361,19 @@ h4 {
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .card {
   flex-basis: 28%;
+  width: 28%;
   height: 200px;
   margin: 0px 15px;
   margin-bottom: 30px;
   background-color: white;
   box-shadow: 0px 5px 20px #999;
-  border: #ffffff 5px solid;
+  border: transparent 5px solid;
   border-radius: 20px;
   cursor: pointer;
 }
@@ -423,7 +386,7 @@ h4 {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   object-fit: cover;
-  width: 250px;
+  width: 100%;
   height: 120px;
 }
 
@@ -473,6 +436,7 @@ h4 {
   padding-right: 20px;
   border-radius: 20px;
   background-color: #f2f2f2;
+  height: max-content;
 }
 
 #populaires {
@@ -482,23 +446,29 @@ h4 {
   background-color: #f2f2f2;
   border-radius: 20px;
   padding-top: 20px;
-  width: min-content;
+  width: max-content;
+  max-width: 30%;
   margin: 1rem;
 }
 
-.popularicon {
+.titrepopulaires {
   display: flex;
-  justify-self: end;
+  justify-content: space-between;
+}
+
+.popularicon {
+  font-size: 1.5em;
+  margin: 1.5rem;
 }
 
 .cards2 {
-  width: 350px;
+  width: 100%;
   height: 130px;
   margin: 0px 1rem;
-  margin-bottom: 30px;
+  margin-bottom: 1rem;
   background-color: white;
   box-shadow: 0px 5px 20px #999;
-  border: #ffffff 5px solid;
+  border: transparent 5px solid;
   border-radius: 20px;
   cursor: pointer;
 }
@@ -516,12 +486,13 @@ h4 {
 }
 
 .cardtitles2 {
-  width: 190px;
   font-weight: bold;
   margin-bottom: -12px;
 }
 
 .cardright {
+  width: auto;
+  max-width: 50%;
   position: relative;
   left: 135px;
   bottom: 140px;
@@ -529,8 +500,8 @@ h4 {
 }
 
 .starratings2 {
-  align-items: flex-end;
-  justify-items: flex-end;
+  position: absolute;
+  top: 6rem;
 }
 
 @media screen and (min-width: 1441px) {
@@ -545,10 +516,38 @@ h4 {
 @media screen and (max-width: 1440px) {
   #hebergement {
     order: 2;
+    max-width: none;
+  }
+  .card {
+    flex-basis: 40%;
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
   #populaires {
     order: 1;
-    width: max-content;
+    max-width: none;
+    width: 100%;
+  }
+  .section3 {
+    height: 200px;
+  }
+  .cards2 {
+    width: 28%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .cards2 {
+    width: 90%;
+  }
+  .section3 {
+    height: max-content;
+  }
+}
+
+@media screen and (max-width: 805px) {
+  .card {
+    flex-basis: 90%;
   }
 }
 
@@ -556,14 +555,27 @@ h4 {
   #hebergement {
     background-color: white;
   }
+  .card {
+    flex-basis: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
   .section2 {
     background-color: white;
+  }
+  #populaires {
+    border-radius: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .titrepopulaires {
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 }
 
 .titres4 {
   margin-top: 3rem;
-  margin-bottom: none;
 }
 
 .bloc2 {
@@ -596,7 +608,6 @@ h4 {
 
 .titlebox {
   grid-row-end: end;
-  grid-column: 1fr;
   background-color: #ffffff;
 }
 
@@ -650,24 +661,24 @@ h4 {
     grid-column: 1/2;
   }
   .activite2 {
-    grid-column: 2/3;
     grid-row: 2/5;
+    grid-column: 2/3;
   }
   .activite3 {
-    grid-column: 3/4;
     grid-row: 2/7;
+    grid-column: 3/4;
   }
   .activite4 {
-    grid-column: 4/5;
     grid-row: 2/3;
+    grid-column: 4/5;
   }
   .activite5 {
-    grid-column: 2/3;
     grid-row: 6/7;
+    grid-column: 2/3;
   }
   .activite6 {
-    grid-column: 4/5;
     grid-row: 4/7;
+    grid-column: 4/5;
   }
 }
 
@@ -675,7 +686,7 @@ h4 {
   .activites {
     row-gap: 2rem;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 14rem 14rem 14rem;
+    grid-template-rows: 14rem 14rem;
   }
 }
 
@@ -683,7 +694,7 @@ h4 {
   .activites {
     row-gap: 2rem;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 14rem 14rem 14rem 14rem;
+    grid-template-rows: 14rem 14rem 14rem;
   }
 }
 
@@ -691,7 +702,7 @@ h4 {
   .activites {
     row-gap: 2rem;
     grid-template-columns: 1fr;
-    grid-template-rows: 14rem 14rem 14rem 14rem 14rem 14rem 14rem;
+    grid-template-rows: 14rem 14rem 14rem 14rem 14rem 14rem;
   }
 }
 
