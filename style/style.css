@@ -444,6 +444,10 @@ article {
   margin-bottom: 1.5rem;
 }
 
+#afficherplus:hover {
+  color: #0065fc;
+}
+
 .section3 {
   display: flex;
   flex-wrap: wrap;
@@ -742,6 +746,7 @@ footer {
   margin: 3rem 3rem;
   display: flex;
   flex-direction: column;
+  flex: 1 1 30%;
 }
 
 .footerlink {
